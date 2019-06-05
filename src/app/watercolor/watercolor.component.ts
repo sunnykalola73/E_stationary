@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-watercolor',
-  templateUrl: './watercolor.component.html',
-  styleUrls: ['./watercolor.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class WatercolorComponent implements OnInit {
 
@@ -11,5 +11,10 @@ export class WatercolorComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  public abc = "Water Color";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Aptitude" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Database" }
+];
 }

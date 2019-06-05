@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cdwallet',
-  templateUrl: './cdwallet.component.html',
-  styleUrls: ['./cdwallet.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class CdwalletComponent implements OnInit {
 
@@ -11,5 +11,9 @@ export class CdwalletComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public abc = "CD Wallet";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Mino Wallet" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"John Wallet" }
+  ];
 }

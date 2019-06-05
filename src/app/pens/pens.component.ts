@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pens',
-  templateUrl: './pens.component.html',
-  styleUrls: ['./pens.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class PensComponent implements OnInit {
 
@@ -11,5 +11,10 @@ export class PensComponent implements OnInit {
 
   ngOnInit() {
   }
+  public abc = "Pens";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Miya Pens" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Lesley Pens" }
+  ];
 
 }

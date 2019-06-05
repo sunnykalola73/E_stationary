@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pencilcolor',
-  templateUrl: './pencilcolor.component.html',
-  styleUrls: ['./pencilcolor.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class PencilcolorComponent implements OnInit {
 
@@ -11,5 +11,11 @@ export class PencilcolorComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  public abc = "Pencil Color";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Small" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Big" }
+];
 
 }

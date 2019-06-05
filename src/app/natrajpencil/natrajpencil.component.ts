@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-natrajpencil',
-  templateUrl: './natrajpencil.component.html',
-  styleUrls: ['./natrajpencil.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class NatrajpencilComponent implements OnInit {
 
@@ -12,4 +12,9 @@ export class NatrajpencilComponent implements OnInit {
   ngOnInit() {
   }
 
+  public abc = "Natraj Pencil";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Natalia Pencil" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Chou Pencil" }
+];
 }

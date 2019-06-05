@@ -1,29 +1,7 @@
-<div style="text-align:center">
+<!--<div style="text-align:center">
    <div class="clearfix">
-    <div class="column menu">
-      <header>
-        Catagories
-      </header>
-      <br><br>
-      <ul>
-        <li>
-          Books
-        </li>
-        <ul>
-          <li>Educational</li>
-          <li>General Knowledge</li>
-          <li>Aptitude</li>
-        </ul>
-        <br>
-        <li>
-          Pencils
-        </li><br>
-        <li>
-          Crayons
-        </li><br>
-      </ul>
-    </div>
-  
+    
+    
     <div class="column content">
       <div class="col-md-2 column productbox">
         <img src="/assets/images/book.jpg" class="img-responsive">
@@ -46,5 +24,13 @@
         <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
     </div>
     </div>
+  </div>
+</div>-->
+<h1>{{abc }}</h1>
+<div *ngFor="let book of books">
+  <div class="col-md-2 column productbox">
+      <img src={{book.url}} class="img-responsive">
+      <div class="producttitle">{{book.title}}</div>
+      <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">{{book.price}}</div></div>
   </div>
 </div>

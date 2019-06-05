@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pendrive',
-  templateUrl: './pendrive.component.html',
-  styleUrls: ['./pendrive.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class PendriveComponent implements OnInit {
 
@@ -11,5 +11,9 @@ export class PendriveComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public abc = "Pendrive";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Guni Pendrive" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Angela Pendrive" }
+  ];
 }

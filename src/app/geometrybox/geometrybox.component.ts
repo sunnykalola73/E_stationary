@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-geometrybox',
-  templateUrl: './geometrybox.component.html',
-  styleUrls: ['./geometrybox.component.scss']
+  templateUrl: '../body/body.component.html',
+  styleUrls: ['../body/body.component.scss']
 })
 export class GeometryboxComponent implements OnInit {
 
@@ -12,4 +12,9 @@ export class GeometryboxComponent implements OnInit {
   ngOnInit() {
   }
 
+  public abc = "Geo metrybox";
+  public books = [
+    {url: "/assets/images/book.jpg", price:'₹ 200', title:"Small" },
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Big" }
+];
 }

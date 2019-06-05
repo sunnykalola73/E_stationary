@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { NgMaterialMultilevelMenuModule } from 'ng-material-multilevel-menu';
 import { MatMenuModule} from '@angular/material/menu';
 import { BodyComponent } from './body/body.component';
+import { FiltersectionComponent } from './filtersection/filtersection.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { BodyComponent } from './body/body.component';
     AppComponent,
     HeaderComponent,
     routingComponent,
-    BodyComponent
+    BodyComponent,
+    FiltersectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

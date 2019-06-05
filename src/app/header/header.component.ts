@@ -16,33 +16,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
   
-
-  appitems = [
-    {
-      label:'Category',
-      items: [
-        {
-          label: 'Art & Craft',
-          link: '/art-craft',
-          },
-        {
-          label: 'School Stationary',
-          link: '/sch-stationary',
-        },
-        {
-          label: 'Computer Stationary',
-          link: '/item-1-1',
-          },
-          {
-            label: 'Office Stationary',
-            link: '/item-1-1',
-            },
-            {
-              label: 'College Stationary',
-              link: '/item-1-1',
-            }
-        ]
-    },  
-  ];
-
 }
