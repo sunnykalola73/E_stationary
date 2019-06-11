@@ -15,6 +15,7 @@ import { PendriveComponent } from './pendrive/pendrive.component';
 import { CdwalletComponent } from './cdwallet/cdwallet.component';
 import { DairiesComponent } from './dairies/dairies.component';
 import { PensComponent } from './pens/pens.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path:'cd-wallet',component:CdwalletComponent},
   { path:'dairies',component:DairiesComponent},
   { path:'pens',component:PensComponent},  
+  { path:'login',component:LoginComponent}
 ];
 
 @NgModule({
@@ -54,5 +56,6 @@ export const routingComponent = [ArtCraftComponent,
                                 PendriveComponent,
                                 CdwalletComponent,
                                 DairiesComponent,
-                                PensComponent
+                                PensComponent,
+                                LoginComponent
                               ]

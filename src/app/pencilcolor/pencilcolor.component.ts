@@ -11,7 +11,7 @@ export class PencilcolorComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public flag = true;
   public abc = "Pencil Color";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Small" },

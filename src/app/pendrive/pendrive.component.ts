@@ -11,6 +11,7 @@ export class PendriveComponent implements OnInit {
 
   ngOnInit() {
   }
+  public flag = true;
   public abc = "Pendrive";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Guni Pendrive" },

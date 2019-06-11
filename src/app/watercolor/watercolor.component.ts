@@ -11,10 +11,10 @@ export class WatercolorComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  public flag = true;
   public abc = "Water Color";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Aptitude" },
-  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Database" }
-];
+  {url: "/assets/images/book.jpg", price:"₹ 300", title:"Database" }  
+  ];
 }

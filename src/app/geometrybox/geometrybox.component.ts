@@ -11,7 +11,7 @@ export class GeometryboxComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public flag = true;
   public abc = "Geo metrybox";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Small" },

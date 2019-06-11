@@ -11,7 +11,7 @@ export class NatrajpencilComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public flag = true;
   public abc = "Natraj Pencil";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Natalia Pencil" },

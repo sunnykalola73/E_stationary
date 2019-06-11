@@ -11,7 +11,7 @@ export class DrafteromegaComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public flag = true;
   public abc = "Drafter Omega";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Zilong Drafter" },

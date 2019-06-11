@@ -11,6 +11,7 @@ export class DairiesComponent implements OnInit {
 
   ngOnInit() {
   }
+  public flag = true;
   public abc = "Dairies";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"19's dairy" },

@@ -26,6 +26,8 @@
     </div>
   </div>
 </div>-->
+<div *ngIf=flag>
+<app-filtersection></app-filtersection>
 <h1>{{abc }}</h1>
 <div *ngFor="let book of books">
   <div class="col-md-2 column productbox">
@@ -33,4 +35,12 @@
       <div class="producttitle">{{book.title}}</div>
       <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">{{book.price}}</div></div>
   </div>
+</div>
+<div *ngFor="let book of book1">
+  <div class="col-md-2 column productbox">
+      <img src={{book.url}} class="img-responsive">
+      <div class="producttitle">{{book.title}}</div>
+      <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">{{book.price}}</div></div>
+  </div>
+</div>
 </div>

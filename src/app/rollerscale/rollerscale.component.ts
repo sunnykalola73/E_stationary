@@ -11,6 +11,7 @@ export class RollerscaleComponent implements OnInit {
 
   ngOnInit() {
   }
+  public flag = true;
   public abc = "Roller Scale";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Moscow scale" },

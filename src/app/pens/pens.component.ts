@@ -11,6 +11,7 @@ export class PensComponent implements OnInit {
 
   ngOnInit() {
   }
+  public flag = true;
   public abc = "Pens";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Miya Pens" },

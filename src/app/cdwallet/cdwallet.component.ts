@@ -11,6 +11,7 @@ export class CdwalletComponent implements OnInit {
 
   ngOnInit() {
   }
+  public flag = true;
   public abc = "CD Wallet";
   public books = [
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Mino Wallet" },

@@ -10,7 +10,9 @@ import { MatMenuModule} from '@angular/material/menu';
 import { BodyComponent } from './body/body.component';
 import { FiltersectionComponent } from './filtersection/filtersection.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import { FooterComponent } from './footer/footer.component';
     routingComponent,
     BodyComponent,
     FiltersectionComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatMenuModule,
-    NgMaterialMultilevelMenuModule
+    NgMaterialMultilevelMenuModule,
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],
