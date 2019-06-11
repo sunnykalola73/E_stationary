@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { User } from './user';
+import { LoginUser } from './loginuser';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class SignupserviceService {
+export class LoginserviceService {
 
    baseUrl = 'http://localhost:8012/AlphaOne';
   constructor(private http : HttpClient  ) { }
-
- /* signup(user : User){
-    return this._http.post<any>(this._url, user);
-  }*/
 
   private handleError(error: HttpErrorResponse) {
     console.log(error);
@@ -22,8 +18,9 @@ export class SignupserviceService {
     return throwError('Error! something went wrong.');
   }
   
-  signup(user: User) {
+  login(user: LoginUser) {
+    
+    return this.http.post(`${this.baseUrl}/login.php`,  user );
     console.log("Successfully inserted");
-    return this.http.post(`${this.baseUrl}/signup.php`,  user );
   } 
 }

@@ -10,7 +10,6 @@ import { MatMenuModule} from '@angular/material/menu';
 import { BodyComponent } from './body/body.component';
 import { FiltersectionComponent } from './filtersection/filtersection.component';
 import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 
@@ -21,8 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     routingComponent,
     BodyComponent,
     FiltersectionComponent,
-    FooterComponent,
-    LoginComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

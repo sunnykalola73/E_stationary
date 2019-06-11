@@ -8,14 +8,12 @@ import { SignupserviceService} from '../signupservice.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  userModel = new User('','','','','','','');
+  userModel = new User('','','','','');
 
   constructor(private _signupservice : SignupserviceService) { }
 
   ngOnInit() {
   }
-
-  topics = ['Angular','Node','React']
 
   onSubmit(){
     this._signupservice.signup(this.userModel)
