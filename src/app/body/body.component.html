@@ -1,46 +1,29 @@
-<!--<div style="text-align:center">
-   <div class="clearfix">
-    
-    
-    <div class="column content">
-      <div class="col-md-2 column productbox">
-        <img src="/assets/images/book.jpg" class="img-responsive">
-        <div class="producttitle">Product 1</div>
-        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
-    </div>
-    <div class="col-md-2 column productbox">
-        <img src="/assets/images/book.jpg" class="img-responsive">
-        <div class="producttitle">Product 2</div>
-        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
-    </div>
-    <div class="col-md-2 column productbox">
-        <img src="/assets/images/book.jpg" class="img-responsive">
-        <div class="producttitle">Product 3</div>
-        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
-    </div>
-    <div class="col-md-2 column productbox">
-        <img src="/assets/images/book.jpg" class="img-responsive">
-        <div class="producttitle">Product 4</div>
-        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
-    </div>
-    </div>
-  </div>
-</div>-->
+
 <div *ngIf=flag>
 <app-filtersection></app-filtersection>
+</div>
+<div>
 <h1>{{abc }}</h1>
 <div *ngFor="let book of books">
   <div class="col-md-2 column productbox">
       <img src={{book.url}} class="img-responsive">
-      <div class="producttitle">{{book.title}}</div>
-      <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">{{book.price}}</div></div>
+      <div class="producttitle"  >{{book.title}}</div>
+      <div class="productprice"><div class="pull-right"><button (click)="addCart(book.title,book.price)" class="btn btn-danger btn-sm">Add To Cart</button></div><div class="pricetext" >{{book.price}}</div></div>
   </div>
 </div>
 <div *ngFor="let book of book1">
   <div class="col-md-2 column productbox">
       <img src={{book.url}} class="img-responsive">
       <div class="producttitle">{{book.title}}</div>
-      <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">{{book.price}}</div></div>
+      <div class="productprice"><div class="pull-right"><button (click)="addCart(book.title,book.price)" class="btn btn-danger btn-sm">Add To Cart</button></div><div class="pricetext">{{book.price}}</div></div>
   </div>
 </div>
+</div>
+
+
+<div *ngIf=cart id="theList">
+  <h2>The list</h2>
+  <ul>
+    <li *ngFor="let item of items">{{item.title}} | {{item.price}} </li>
+  </ul>
 </div>

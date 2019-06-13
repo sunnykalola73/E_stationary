@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import * as platformBrowser from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,6 +12,8 @@ import { FiltersectionComponent } from './filtersection/filtersection.component'
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
+import { SignupserviceService } from './signupservice.service';
+import { LoginserviceService } from './loginservice.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+    platformBrowser.BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatMenuModule,
@@ -32,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [ SignupserviceService,LoginserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -17,9 +17,13 @@ import { DairiesComponent } from './dairies/dairies.component';
 import { PensComponent } from './pens/pens.component';
 import { LoginComponent } from './login/login.component';
 import { LogincontrollerComponent } from './logincontroller/logincontroller.component';
+import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
+  {path:' ',redirectTo:'/home',pathMatch:'full'},
+  { path:'home', component: HomeComponent},
   { path: 'art-craft', component: ArtCraftComponent},
   { path: 'sch-stationary', component: SchoolstationaryComponent},
   { path: 'office-stationary', component: OfficestationaryComponent},
@@ -36,7 +40,8 @@ const routes: Routes = [
   { path:'dairies',component:DairiesComponent},
   { path:'pens',component:PensComponent},  
   { path:'signup',component:LoginComponent},
-  {path:'login',component:LogincontrollerComponent}
+  {path:'login',component:LogincontrollerComponent},
+  { path:'cart',component:CartComponent }
 ];
 
 @NgModule({
@@ -44,7 +49,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [ArtCraftComponent,
+export const routingComponent = [HomeComponent,
+                                ArtCraftComponent,
                                 SchoolstationaryComponent,
                                 OfficestationaryComponent,
                                 ComputerstationaryComponent,
@@ -60,5 +66,6 @@ export const routingComponent = [ArtCraftComponent,
                                 DairiesComponent,
                                 PensComponent,
                                 LoginComponent,
-                                LogincontrollerComponent
+                                LogincontrollerComponent,
+                                CartComponent
                               ]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { item } from '../item';
+import { AddcartserviceService } from '../addcartservice.service';
 
 @Component({
   selector: 'app-art-craft',
@@ -7,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtCraftComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _addcart : AddcartserviceService) { }
 
   ngOnInit() {
   }
 
+  i = new item('','');
   public flag = true;
   public abc = "Art & Craft";
   public books = [
@@ -22,4 +25,16 @@ export class ArtCraftComponent implements OnInit {
     {url: "/assets/images/book.jpg", price:'₹ 200', title:"Small" },
   {url: "/assets/images/book.jpg", price:"₹ 300", title:"Big" }
   ];
+
+  addCart( title,price){
+    this.i.title  = title;
+    this.i.price = price;
+
+    this._addcart.store(this.i)
+      .subscribe(
+        data => console.log('SUCCESS'),
+        (error) => console.log('ERROOOOOOR')
+      );
+      console.log(this.i);
+  }
 }

@@ -16,3 +16,10 @@
     <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
+
+<div id="theList" *ngIf=flag>
+  <h2>The list</h2>
+  <ul>
+    <li >{{user | json }} </li>
+  </ul>
+</div>

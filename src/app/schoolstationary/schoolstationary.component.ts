@@ -11,6 +11,7 @@ export class SchoolstationaryComponent implements OnInit {
 
   ngOnInit() {
   }
+
   public flag = true;
   public abc = "School Stationary";
   public books = [
