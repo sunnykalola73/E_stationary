@@ -13,13 +13,17 @@
     </div>
 
 
-    <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
+    <button [disabled]="userForm.form.invalid" (click)="onSubmit()" class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
 
 <div id="theList" *ngIf=flag>
   <h2>The list</h2>
   <ul>
-    <li >{{user | json }} </li>
+    <li *ngFor="let item of user">{{item.id}} | {{item.name}} </li>
+  </ul>
+  skcjbdsvhsjd
+  <ul>
+    <li *ngFor="let item of luser">{{item.id}} | {{item.name}} </li>
   </ul>
 </div>

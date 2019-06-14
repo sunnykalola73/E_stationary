@@ -31,21 +31,29 @@ export class LoginserviceService {
   }
 */
   getAll(): Observable<User[]> {
-    return this.http.get(`${this.baseUrl}/login.php`).pipe(
+  return this.http.get(`${this.baseUrl}/list1.php`).pipe(
+    map((res) => {
+      this.luser = res['data'];
+      console.log(this.luser);
+      return this.luser;
+  }),
+  catchError(this.handleError));
+  }
+  login(car:LoginUser): Observable<User[]> {
+    return this.http.get(`${this.baseUrl}/login1.php`,{params:{uid:car.uname,pwd:car.pwd}}).pipe(
       map((res) => {
         this.luser = res['data'];
+        console.log(this.luser);
         return this.luser;
     }),
     catchError(this.handleError));
-  }
-
-   login(car: LoginUser): Observable<User[]> {
-    return this.http.post(`${this.baseUrl}/login.php`, { data: car })
+  }  
+ /* login(car: LoginUser): Observable<User[]> {
+    return this.http.get(`${this.baseUrl}/login1.php`, { params : {uid :car.uname,pwd : car.pwd} })
       .pipe(map((res) => {
         this.luser.push(res['data']);
-        console.log(res['data']);
         return this.luser;
       }),
       catchError(this.handleError));
-}
+}*/
 }

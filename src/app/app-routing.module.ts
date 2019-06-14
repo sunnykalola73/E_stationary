@@ -22,7 +22,6 @@ import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
-  {path:' ',redirectTo:'/home',pathMatch:'full'},
   { path:'home', component: HomeComponent},
   { path: 'art-craft', component: ArtCraftComponent},
   { path: 'sch-stationary', component: SchoolstationaryComponent},
@@ -41,7 +40,8 @@ const routes: Routes = [
   { path:'pens',component:PensComponent},  
   { path:'signup',component:LoginComponent},
   {path:'login',component:LogincontrollerComponent},
-  { path:'cart',component:CartComponent }
+  { path:'cart',component:CartComponent },
+  {path:'',redirectTo:'/home',pathMatch:'full'}
 ];
 
 @NgModule({

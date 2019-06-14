@@ -13,8 +13,8 @@ export class CartComponent implements OnInit {
   error = '';
   success = '';
   cart = true;
-        
-  constructor(private carService: GetcartService) {
+  i = new item('','');  
+  constructor(private cartService: GetcartService) {
   }
         
   ngOnInit() {
@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
   }
         
   getCars(): void {
-    this.carService.getAll().subscribe(
+    this.cartService.getAll().subscribe(
       (res: item[]) => {
         this.items = res;
       },
@@ -30,5 +30,17 @@ export class CartComponent implements OnInit {
         this.error = err;
       }
     )
+  }
+
+  delete(id)
+  {
+    this.cartService.delete(+id)
+    .subscribe(
+      (res: item[]) => {
+        this.items = res;
+        this.success = 'Deleted successfully';
+      },
+      (err) => this.error = err
+    );
   }
 }

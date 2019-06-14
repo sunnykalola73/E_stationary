@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  home =  true;
   flag1 = true;
   flag = false;
 }

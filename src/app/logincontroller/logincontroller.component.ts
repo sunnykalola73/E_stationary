@@ -10,28 +10,32 @@ import { User } from '../user';
 })
 export class LogincontrollerComponent implements OnInit {
   userModel = new LoginUser('','');
+  userM = new LoginUser('','');
   flag = true ;
   user : User[];
+  luser : User[];
   constructor(private _loginservice : LoginserviceService) { }
 
   ngOnInit() {
     this.getCars();
+    this.onSubmit();
   }
 
   getCars(): void {
     this._loginservice.getAll().subscribe(
       (res: User[]) => {
         this.user = res;
+        console.log(this.user);
       },
       (err) => console.log('erooor')
     );
   }
   
   onSubmit(){
-     this._loginservice.login(this.userModel)
+     this._loginservice.login(this.userM)
     .subscribe(
-      (res : User[]) => {
-        this.user =  res;
+      (res : any) => {
+        this.luser =  res;
       }, 
       error => console.log('Error!',error)
     )
